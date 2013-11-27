@@ -14,6 +14,8 @@ class Player
 	protected:
 		int portNo ;
 		sf::Vector2f playerPosition;
+		sf::Vector2f Velocity;
+		sf::Vector2f previousPos;
 		
 
 
@@ -25,8 +27,11 @@ class Player
 		int getPort();
 		void setPort(int);
 		void setPosition(sf::Vector2f);
+		float length;
+		float checkDistance();
 		sf::Vector2f getPosition();
 		void update(int);
+		
 
 		int test;
 

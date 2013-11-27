@@ -1,7 +1,6 @@
 #ifndef _PacketStream_H_
 #define _PacketStream_H_
 
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Keyboard.hpp>
 #include <iostream>
@@ -23,8 +22,8 @@ public:
 	PacketStream();
 	//~PacketStream();
 
-	void writeInt(int val);      
-	void readInt(int &val);      
+	void writeInt(float val);      
+	void readInt(float &val);      
 	void toCharArray(char* array);      
 	void fromCharArray(char* array);   
 };

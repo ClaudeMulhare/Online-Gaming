@@ -141,7 +141,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							playerA.update(1);
 							playerA.writePacketData(messageA);
 							messageA.toCharArray(message);
-							network.sendData("127.0.0.1",destPort, message);
+							
 						}
 
 						else if(player == 1)
@@ -149,11 +149,9 @@ int _tmain(int argc, _TCHAR* argv[])
 							playerB.update(1);
 							playerB.writePacketData(messageA);
 							messageA.toCharArray(message);
-							network.sendData("127.0.0.1",destPort, message);
+							
 						}
-						network.sendData("127.0.0.1",destPort, "W");
-						
-						//Snetwork.sendData("127.0.0.1",destPort, messageA);
+						network.sendData("127.0.0.1",destPort, message);
 					  }
 
 					  if (sf::Keyboard::IsKeyPressed(sf::Keyboard::A))
@@ -161,13 +159,18 @@ int _tmain(int argc, _TCHAR* argv[])
 						if(player == 2)
 						{
 							playerA.update(2);
+							playerA.writePacketData(messageA);
+							messageA.toCharArray(message);
 						}
 
 						else if(player == 1)
 						{
 							playerB.update(2);
+							playerB.writePacketData(messageA);
+							messageA.toCharArray(message);
+
 						}
-						network.sendData("127.0.0.1",destPort, "A");
+						network.sendData("127.0.0.1",destPort, message);
 					  }
 
 					  if (sf::Keyboard::IsKeyPressed(sf::Keyboard::S))
@@ -175,13 +178,17 @@ int _tmain(int argc, _TCHAR* argv[])
 						if(player == 2)
 						{
 							playerA.update(3);
+							playerA.writePacketData(messageA);
+							messageA.toCharArray(message);
 						}
 
 						else if(player == 1)
 						{
 							playerB.update(3);
+							playerB.writePacketData(messageA);
+							messageA.toCharArray(message);
 						}
-						network.sendData("127.0.0.1",destPort, "S");
+						network.sendData("127.0.0.1",destPort, message);
 					  }
 
 					  if (sf::Keyboard::IsKeyPressed(sf::Keyboard::D))
@@ -189,19 +196,45 @@ int _tmain(int argc, _TCHAR* argv[])
 						  if(player == 2)
 						{
 							playerA.update(4);
+							playerA.writePacketData(messageA);
+							messageA.toCharArray(message);
 						}
 
 						else if(player == 1)
 						{
 							playerB.update(4);
+							playerB.writePacketData(messageA);
+							messageA.toCharArray(message);
 						}
-						  network.sendData("127.0.0.1",destPort, "D");
+						  network.sendData("127.0.0.1",destPort, message);
 					  }
-
+					  LOG4CXX_INFO(loggerMyMain, "message sent")
 					}
+
 
 					if(network.receiveData(message))
 					{
+						LOG4CXX_INFO(loggerMyMain, "message recieved")
+						if(player == 1)
+						{	
+							messageA.fromCharArray(message);
+							playerA.receivePacketData(messageA);
+							LOG4CXX_INFO(loggerMyMain, playerA.getPosition().x )
+							LOG4CXX_INFO(loggerMyMain, playerA.getPosition().y )
+							LOG4CXX_INFO(loggerMyMain, playerB.getPosition().x )
+							LOG4CXX_INFO(loggerMyMain, playerB.getPosition().y )
+						}
+
+						else if(player == 2)
+						{
+							messageA.fromCharArray(message);
+							playerB.receivePacketData(messageA);
+							LOG4CXX_INFO(loggerMyMain, playerA.getPosition().x )
+							LOG4CXX_INFO(loggerMyMain, playerA.getPosition().y )
+							LOG4CXX_INFO(loggerMyMain, playerB.getPosition().x )
+							LOG4CXX_INFO(loggerMyMain, playerB.getPosition().y )
+						}
+						/*
 					LOG4CXX_INFO(loggerMyMain, message );
 					
 					if(strcmp(message , W) == 0)
@@ -249,7 +282,7 @@ int _tmain(int argc, _TCHAR* argv[])
 								playerB.update(3);
 							}
 					}
-
+					
 					if(strcmp(message , D) == 0)
 					{
 						LOG4CXX_INFO(loggerMyMain, "Message Recieved" );
@@ -266,7 +299,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 						}
 
-
+					*/
 						  
 					}
 				}

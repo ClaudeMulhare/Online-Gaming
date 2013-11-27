@@ -1,14 +1,18 @@
-﻿Build started 21/11/2013 13:07:43.
-     1>Project "C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\SFMLStarter.vcxproj" on node 2 (build target(s)).
+﻿Build started 27/11/2013 13:26:01.
+     1>Project "C:\Users\lab422\Online-Gaming\PacketStreamingInt\SFMLStarter.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\SFMLStarter.unsuccessfulbuild".
+         Creating "Debug\SFMLStarter.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\lab422\Online-Gaming\PacketStreamingInt\\lib\log4cxx\include" /I"C:\Users\lab422\Online-Gaming\PacketStreamingInt\\lib\SFML\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt SFMLStarter.cpp
+         SFMLStarter.cpp
+     1>C:\Users\lab422\Online-Gaming\PacketStreamingInt\lib\log4cxx\include\log4cxx/spi/configurator.h(57): warning C4231: nonstandard extension used : 'extern' before template explicit instantiation
+     1>SFMLStarter.cpp(71): warning C4244: 'argument' : conversion from 'const int' to 'float', possible loss of data
+     1>SFMLStarter.cpp(71): warning C4244: 'argument' : conversion from 'const int' to 'float', possible loss of data
          All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\Debug\SFMLStarter.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\\lib\log4cxx\libs" /LIBPATH:"C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\\lib\SFML\libs" ws2_32.lib log4cxx.lib "sfml-graphics-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SFMLStarter.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\Debug\SFMLStarter.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\Debug\SFMLStarter.lib" /MACHINE:X86 Debug\SFMLStarter.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lab422\Online-Gaming\PacketStreamingInt\Debug\SFMLStarter.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\lab422\Online-Gaming\PacketStreamingInt\\lib\log4cxx\libs" /LIBPATH:"C:\Users\lab422\Online-Gaming\PacketStreamingInt\\lib\SFML\libs" ws2_32.lib log4cxx.lib "sfml-graphics-d.lib" "sfml-system-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SFMLStarter.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lab422\Online-Gaming\PacketStreamingInt\Debug\SFMLStarter.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lab422\Online-Gaming\PacketStreamingInt\Debug\SFMLStarter.lib" /MACHINE:X86 Debug\SFMLStarter.exe.embed.manifest.res
          Debug\Net.obj
          Debug\PacketStream.obj
          Debug\Player.obj
@@ -18,12 +22,12 @@
          All outputs are up-to-date.
        LinkEmbedManifest:
          All outputs are up-to-date.
-         SFMLStarter.vcxproj -> C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\Debug\SFMLStarter.exe
+         SFMLStarter.vcxproj -> C:\Users\lab422\Online-Gaming\PacketStreamingInt\Debug\SFMLStarter.exe
        FinalizeBuildStatus:
          Deleting file "Debug\SFMLStarter.unsuccessfulbuild".
          Touching "Debug\SFMLStarter.lastbuildstate".
-     1>Done Building Project "C:\Users\lab422\Documents\Visual Studio 2010\Projects\SFMLStarter\SFMLStarter.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\lab422\Online-Gaming\PacketStreamingInt\SFMLStarter.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.40
+Time Elapsed 00:00:01.49

@@ -4,7 +4,7 @@ using namespace sf;
 
 Player::Player()
 {
-	test = 0;
+	length = 0;
 }
 
 
@@ -43,22 +43,22 @@ void Player::update(int move)
 {
 	if(move == 2)
 	{
-		playerPosition.x -= 10;
+		playerPosition.x -= 5;
 	}
 
 	if(move == 4)
 	{
-		playerPosition.x += 10;	
+		playerPosition.x += 5;	
 	}
 
 	if(move == 1)
 	{
-		playerPosition.y -= 10;
+		playerPosition.y -= 5;
 	}
 
 	if(move == 3)
 	{
-		playerPosition.y += 10;
+		playerPosition.y += 5;
 	}
 
 }
@@ -83,6 +83,8 @@ bool Player::checkCollision(sf::Vector2f otherPlayer)
 
 }
 
+
+
 Player::~Player()
 {
 
@@ -93,13 +95,15 @@ Player::~Player()
 void Player::writePacketData(PacketStream & streamIn)
 {
         streamIn.writeInt(playerPosition.x);
-       // streamIn.writeInt(positionY);
-       // streamIn.writeInt(currentHealth);
+        streamIn.writeInt(playerPosition.y);
+		streamIn.writeInt(Velocity.x);
+		streamIn.writeInt(Velocity.y);
 } 
 
 void Player::receivePacketData(PacketStream & streamIn)
 {
-       streamIn.readInt(test);
-       //streamIn. readInt(positionY);
-       //streamIn.readInt(currentHealth);
+        streamIn.readInt(playerPosition.x);
+        streamIn.readInt(playerPosition.y);
+		streamIn.readInt(Velocity.x);
+		streamIn.readInt(Velocity.y);
 } 

@@ -5,12 +5,12 @@ PacketStream::PacketStream()
 	
 }
 
-void PacketStream::writeInt(int dataIn)
+void PacketStream::writeInt(float dataIn)
 {
-		outputStream <<dataIn<<"";
+		outputStream <<dataIn<<" ";
 }
 
-void PacketStream::readInt(int &dataOut)
+void PacketStream::readInt(float &dataOut)
 {
 		inputStream >>dataOut;
 }
